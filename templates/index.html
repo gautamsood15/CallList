@@ -4,16 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CallList</title>
 
-    <style>
-    
-    </style>
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     {% load static %}
+
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link rel="icon" href="{% static 'images/favicon.webp' %}" type="image/webp">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-    <p id="para">This is index page</p>
+
+    <div class="container">
+        <header class="header">
+            <form class="search-bar">
+                <input type="search-name" class="contact-search" name="search-area" placeholder="Search">
+            </form>
+
+            <i class="fa-solid fa-circle-plus"></i>
+        </header>
+
+        <section class="contacts-library">
+            <ul class="contacts-list">
+                <div class="contact-section">
+                    <li class="list__item">
+                        <p class="contact-name">John Doe</p>
+                        <p class="relationship">Friend</p>
+                    </li>
+
+                    <li class="list__item">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </li>
+                </div>
+
+                <hr>
+
+
+                <div class="contact-section">
+                    <li class="list__item">
+                        <p class="contact-name">John Doe</p>
+                        <p class="relationship">Friend</p>
+                    </li>
+
+                    <li class="list__item">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </li>
+                </div>
+
+                <hr>
+
+                <div class="contact-section">
+                    <li class="list__item">
+                        <p class="contact-name">John Doe</p>
+                        <p class="relationship">Family</p>
+                    </li>
+
+                    <li class="list__item">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </li>
+                </div>
+
+                <hr>
+
+                <div class="contact-section">
+                    <li class="list__item">
+                        <p class="contact-name">John Doe</p>
+                        <p class="relationship">Friend</p>
+                    </li>
+
+                    <li class="list__item">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </li>
+                </div>
+
+                <hr>
+
+                <div class="contact-section">
+                    <li class="list__item">
+                        <p class="contact-name">John Doe</p>
+                        <p class="relationship">Work</p>
+                    </li>
+
+                    <li class="list__item">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </li>
+                </div>
+
+                <hr>
+
+                <div class="contact-section">
+                    <li class="list__item">
+                        <p class="contact-name">John Doe</p>
+                        <p class="relationship">Friend</p>
+                    </li>
+
+                    <li class="list__item">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </li>
+                </div>
+
+                <hr>
+            </ul>
+        </section>
+    </div>
+    
 </body>
 </html>
