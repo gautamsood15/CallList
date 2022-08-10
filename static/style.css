@@ -1,22 +1,24 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
+    color: rgb(205, 195, 195);
+    
 }
 
 .container {
     max-width: 428px;
     margin: 0 auto;
     background-color: #313438;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .header {
     display: flex;
     justify-content: space-evenly;
-    color: rgb(13, 29, 60);
     background: linear-gradient(90deg, rgba(7,6,25,1) 0%, rgba(0,178,214,1) 0%, rgba(3,0,255,1) 100%);
     padding: 2em 0;
     align-items: center;
+    
 }
 
 .contact-search {
@@ -26,4 +28,85 @@ body {
     border: 1px solid #fff;
     outline: none;
 }
+
+i {
+    font-size: 2em;
+}
+
+.contact-name {
+    font-size: 1.2em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+hr {
+    border: 1px solid #494a4b;
+}
+
+.list__item {
+    list-style: none;
+}
+
+.relationship {
+    width: 6em;
+    text-align: center;
+    padding: .4em .5em;
+    border-radius: 100px;
+    border-top-left-radius: 0;
+    background-color: #041a47;
+    font-size: .8em;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5em;
+    transition: 0.3s;
+}
+
+.contact-section:hover {
+    background-color: #2c2d2e;
+}
+
+
+.text {
+    padding-left: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
