@@ -12,3 +12,6 @@ def contact_profile(request):
 
 def edit(request):
     return render(request, "edit.html")
+
+def delete(request):
+    return render(request, "delete.html")

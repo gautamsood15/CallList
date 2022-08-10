@@ -72,8 +72,8 @@ a {
 }
 
 p {
-    margin: 0;
-    padding-left: 2em;
+    padding-bottom: 2em;
+    text-align: center;
 }
 
 .icon-gradient {
@@ -82,21 +82,6 @@ p {
     padding: .5em;
 
 }
-
-#location {
-    padding: .5em .6em;
-}
-
-.type {
-    border: none;
-    background: none;
-    padding-left: 2em;
-    font-size: 1.2em;
-    outline: none;
-    color: #fff;
-}
-
-
 
 .button-container {
     padding: 2em, 3.5em;
