@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect
-
+from .models import Contact
 # Create your views here.
 
 
 def index(request):
-    return render(request, "index.html")
+    contacts = Contact.objects.all()
+    context = {'contacts': contacts}
+    return render(request, "index.html", context)
 
 
-def contact_profile(request):
+def profile(request):
     return render(request, "contact-profile.html")
 
 def edit(request):
@@ -15,3 +17,16 @@ def edit(request):
 
 def delete(request):
     return render(request, "delete.html")
+
+def new(request):
+    if request.method == "POST":
+        new_contact = Contact.objects.create(
+            full_name = request.POST['fullname'],
+            relationship = request.POST['relationship'],
+            email = request.POST['email'],
+            phone_number = request.POST['phone-number'],
+            address = request.POST['address']
+        )
+        new_contact.save()
+        return redirect('/')    
+    return render(request, "new.html")
