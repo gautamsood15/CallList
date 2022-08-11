@@ -5,18 +5,57 @@ from .models import Contact
 
 def index(request):
     contacts = Contact.objects.all()
-    context = {'contacts': contacts}
+
+    search_input = request.GET.get('search-area')
+    if search_input:
+        contacts = Contact.objects.filter(full_name__icontains=search_input)
+    else:
+        contacts=Contact.objects.all()
+        search_input = ''
+    context = {'contacts': contacts, 'search_input': search_input}
     return render(request, "index.html", context)
 
 
-def profile(request):
-    return render(request, "contact-profile.html")
+def profile(request, pk):
 
-def edit(request):
-    return render(request, "edit.html")
+    contacts = Contact.objects.get(id=pk)
+    context = {'contacts': contacts}
+    return render(request, "contact-profile.html", context)
 
-def delete(request):
-    return render(request, "delete.html")
+def edit(request, pk):
+
+    contact = Contact.objects.get(id=pk)
+
+    if request.method == "POST":
+        info = request.POST
+
+        contact.full_name = info['fullname']
+        contact.relationship = info['relationship']
+        contact.phone_number = info['phone']
+        contact.email = info['email']
+        contact.address = info['address']
+        contact.save()
+
+        
+        return redirect('profile', pk=pk)
+
+
+
+
+    context = {'contact': contact}
+    return render(request, "edit.html", context)
+
+def delete(request, pk):
+
+    contact = Contact.objects.get(id=pk)
+
+    if request.method == "POST":
+        contact.delete()
+        return redirect('index')
+
+
+    context = {'contact': contact}
+    return render(request, "delete.html", context)
 
 def new(request):
     if request.method == "POST":
